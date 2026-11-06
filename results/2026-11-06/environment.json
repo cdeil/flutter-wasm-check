@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-06",
+  "software": {
+    "flutter": "3.47.9",
+    "frameworkRevision": "c197ca5199e9ee5661e865596c9c07294dfab51c",
+    "engineRevision": "89c39edfdfae2949f6806e4a315c0c08522238b7",
+    "dart": "3.13.7",
+    "playwright": "1.64.0",
+    "macNode": "26.13.0",
+    "linuxNode": "26.8.1",
+    "candidate": {
+      "revision": "b09e6cabd227035bc209757ae9586b7454049797",
+      "engineContentHash": "55b8ed75b2475807a25d2386b5e8256ddeea7208",
+      "dart": "3.15.0-62.0.dev",
+      "localBootstrapTag": "3.51.0-0.0.pre (local only; not an official release)",
+      "depotTools": "500126d6e351e4f0834b70f71b454ce5c3733c54",
+      "hostBootstrapFlutter": "3.47.8 support cache; candidate Dart/Web SDK and runtime built separately"
+    }
+  },
+  "hosts": {
+    "mac": {
+      "os": "macOS 27.2",
+      "build": "26B123",
+      "cpu": "Apple M3, 8 CPU cores",
+      "memoryGB": 16,
+      "gpu": "Apple M3"
+    },
+    "linux": {
+      "os": "Omarchy 4.0.4",
+      "kernel": "7.2.5-3-omarchy",
+      "cpu": "Intel Core i5-14600K",
+      "gpu": "NVIDIA GeForce RTX 4060 Ti",
+      "gpuMemoryGB": 16,
+      "nvidiaDriver": "610.57.04",
+      "display": ":0"
+    }
+  },
+  "browserLanes": {
+    "macSafari": {
+      "version": "27.2",
+      "bundleVersion": "22625.2.8.11.9",
+      "automation": "Computer Use, real Safari"
+    },
+    "macFirefox": {
+      "version": "159.0.1",
+      "automation": "Computer Use, installed Firefox"
+    },
+    "macChromeInstalled": {
+      "version": "156.0.8078.80",
+      "automation": "Playwright, headless"
+    },
+    "chromeForTestingBothHosts": {
+      "version": "157.0.8103.38",
+      "mac": "headless Metal",
+      "linux": "headed NVIDIA OpenGL; monitor on/unlocked before and after"
+    },
+    "linuxChromeInstalled": {
+      "version": "154.0.8037.97",
+      "automation": "Playwright, headless SwiftShader"
+    },
+    "linuxEdge": {
+      "version": "157.0.4341.42",
+      "automation": "Playwright, headless SwiftShader"
+    },
+    "playwrightFirefoxBothHosts": {
+      "version": "157.0",
+      "patched": true
+    },
+    "linuxVendorFirefox": {
+      "version": "159.0.1",
+      "automation": "Native vendor CLI headless screenshot; application measurement scripts POST to local server"
+    },
+    "linuxNightly": {
+      "version": "162.0a1",
+      "buildID": "20261106044122",
+      "hgRevision": "e3f5b185b198689444fa9c533726980c8ab8ce3d",
+      "scope": "Copy probe only"
+    }
+  },
+  "qualifications": [
+    "Safari browser zoom/display settings preserved: measured viewport 1314x780, reported DPR 2.299999952316284",
+    "Automated dashboard/reference contexts 1440x900 DPR 1; minimal marker contexts resize to 960x660 and 1000x700",
+    "Gecko WebGL renderer aliases are privacy masked and not treated as exact hardware identities",
+    "Current vendor Firefox in-page repetition is separate from Playwright patched-browser repetition",
+    "No physical mobile/Windows qualification, cold-start/hot-reload benchmark, or continuous physical-display FPS capture"
+  ],
+  "validation": {
+    "windowedPlaywrightCases": 579,
+    "windowedPlaywrightFrames": 91591,
+    "nonpositiveFrameIntervals": 0,
+    "additionalNativeInPageSamples": 36,
+    "minimalMarkerStates": 576,
+    "initialStaleMarkerSnapshots": 2,
+    "engineCasePasses": 49,
+    "engineIntentionalSkips": 2,
+    "appUnitWidgetTests": 6
+  }
+}

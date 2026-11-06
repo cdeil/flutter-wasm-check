@@ -1,0 +1,83 @@
+{
+  "mozilla": {
+    "id": 1788206,
+    "summary": "OffscreenCanvas.transferToImageBitmap incurs a copy",
+    "status": "NEW",
+    "resolution": "",
+    "last_change_time": "2026-10-17T01:23:34Z",
+    "target_milestone": "---",
+    "unassigned": true
+  },
+  "webkit": {
+    "234920": {
+      "id": 234920,
+      "summary": "ImageBitmap created from a video element has poor performance",
+      "status": "NEW",
+      "resolution": "",
+      "last_change_time": "2024-01-09T19:47:53Z",
+      "target_milestone": "---",
+      "depends_on": [
+        235043,
+        235044
+      ],
+      "blocks": [
+        267291
+      ]
+    },
+    "267291": {
+      "id": 267291,
+      "summary": "Umbrella: Using Canvas image sources between different canvases and canvas types is slow",
+      "status": "NEW",
+      "resolution": "",
+      "last_change_time": "2026-09-11T08:49:48Z",
+      "target_milestone": "---",
+      "depends_on": [
+        234920,
+        267290,
+        286707,
+        301925,
+        322807,
+        322812,
+        322834,
+        323083,
+        323953,
+        323956,
+        266215,
+        275100,
+        294602,
+        297852,
+        300088,
+        301914,
+        302527,
+        305048,
+        308705,
+        308706,
+        308725,
+        316650,
+        321495,
+        321790,
+        322254,
+        322263,
+        322712,
+        322825,
+        322831,
+        323094,
+        323099,
+        323202,
+        323331,
+        323620
+      ],
+      "blocks": []
+    },
+    "295799": {
+      "id": 295799,
+      "summary": "WasmGC app throws cast errors and eventually crashes only on Safari",
+      "status": "RESOLVED",
+      "resolution": "FIXED",
+      "last_change_time": "2026-08-10T15:30:53Z",
+      "target_milestone": "---",
+      "depends_on": [],
+      "blocks": []
+    }
+  }
+}

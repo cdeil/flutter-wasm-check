@@ -1,0 +1,7 @@
+.dart_tool/
+.fvm/
+.flutter-plugins-dependencies
+build/
+node_modules/
+.DS_Store
+output/

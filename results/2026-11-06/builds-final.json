@@ -1,0 +1,45 @@
+{
+  "note": "Final stable dashboard after Total-format fix. Frame timing captures use profile; size calculations use release. Candidate core artifacts remain in builds-before-total-format-fix.json; native candidate capture refreshes only browser-side recording instrumentation.",
+  "files": {
+    "final-profile/main.dart.js": {
+      "bytes": 12576167,
+      "sha256": "94a2dca55f1bfa04201dbefd6cdcb196aa181516209308ba83a034ce32d9b987"
+    },
+    "final-profile/main.dart.wasm": {
+      "bytes": 4875178,
+      "sha256": "e8b30844d7376b1ae666afa9775d69e7ff62d497b104e14b7a259eccf9780253"
+    },
+    "final-profile/main.dart.mjs": {
+      "bytes": 31751,
+      "sha256": "747bf1dc075b6ed6093dcc97c04b181300b3e19d4c1097ddc034ce672702dec7"
+    },
+    "final-profile/flutter_bootstrap.js": {
+      "bytes": 13649,
+      "sha256": "9f29446892f1216a4c388e94040e55360c94cf9d16f3987f4cb500144fc39c3e"
+    },
+    "final-profile/proof.js": {
+      "bytes": 4058,
+      "sha256": "0020b96e72abd396c0b21b9dd730f79021d33bda6530f159cc61ca089a2d67d6"
+    },
+    "final-release/main.dart.js": {
+      "bytes": 3784532,
+      "sha256": "4321925692eb72348ed8f638096f55ea1ec8e58f76c2d17810644a8eb313968d"
+    },
+    "final-release/main.dart.wasm": {
+      "bytes": 3153844,
+      "sha256": "38f20655e6249bcd5f739dd9133da0e4eb7079936d52b28bf441137f37c3dcd7"
+    },
+    "final-release/main.dart.mjs": {
+      "bytes": 30922,
+      "sha256": "991883c61e03ab0ee0a8c5753a7041e0c223597f8f409a7fbdf3f3a2ed81c4ab"
+    },
+    "final-release/flutter_bootstrap.js": {
+      "bytes": 13649,
+      "sha256": "9f29446892f1216a4c388e94040e55360c94cf9d16f3987f4cb500144fc39c3e"
+    },
+    "final-release/proof.js": {
+      "bytes": 4058,
+      "sha256": "0020b96e72abd396c0b21b9dd730f79021d33bda6530f159cc61ca089a2d67d6"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "flutter-wasm-check",
+  "private": true,
+  "type": "module",
+  "scripts": {"serve": "node tool/serve.mjs", "bench": "node tool/bench.mjs"},
+  "devDependencies": {"playwright": "1.64.0", "pngjs": "7.0.0"}
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base href="$FLUTTER_BASE_HREF" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Flutter Wasm Check</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #proof {
+        position: fixed;
+        z-index: 2147483647;
+        bottom: 0;
+        right: 0;
+        max-width: 80vw;
+        background: #101828;
+        color: white;
+        padding: 5px 9px;
+        font: 11px monospace;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="proof">Loading runtime…</div>
+    <script src="proof.js"></script>
+    <script src="flutter_bootstrap.js" async></script>
+  </body>
+</html>

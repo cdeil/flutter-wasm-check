@@ -1,0 +1,209 @@
+{
+  "note": "Build identity for first stable and candidate campaigns. The later Total-column display fix is documented separately; these binaries are not claimed to match that final edit.",
+  "outputs": {
+    "profile": {
+      "canvaskit/skwasm.js": {
+        "bytes": 63537,
+        "sha256": "71d7d3e34bf71b52bdba3b588b103bba8148ba28de5754083e01b3398e7a6e1c"
+      },
+      "canvaskit/skwasm.wasm": {
+        "bytes": 3593715,
+        "sha256": "e540fd5e8303b7b68ec2718cb49e9c421f8ade3075b15e02a7059a62654df9a1"
+      },
+      "canvaskit/skwasm_heavy.js": {
+        "bytes": 63650,
+        "sha256": "cec554b46ddcf4c0e63d799e0556d546f42d2c3f69316fb4f67ed776f6104558"
+      },
+      "canvaskit/skwasm_heavy.wasm": {
+        "bytes": 5216217,
+        "sha256": "565f5cc1cca6ab120f11934b105f01fec4b58b480c82e0889dca93af8e6f8635"
+      },
+      "flutter_bootstrap.js": {
+        "bytes": 13733,
+        "sha256": "e5d95274c6bcc0d12672d0a3100b46c335224898bdd130d8d3f3c04d95187252"
+      },
+      "main.dart.js": {
+        "bytes": 12576380,
+        "sha256": "c5b63e102dccb975a21fb1064cda874652c36d0e932bb00bd107be997d29e3ab"
+      },
+      "main.dart.mjs": {
+        "bytes": 31751,
+        "sha256": "747bf1dc075b6ed6093dcc97c04b181300b3e19d4c1097ddc034ce672702dec7"
+      },
+      "main.dart.wasm": {
+        "bytes": 4875374,
+        "sha256": "05ecd434911c62939ecda94ff7106f138f902100e3db513352f394bde0bcc876"
+      }
+    },
+    "release": {
+      "canvaskit/skwasm.js": {
+        "bytes": 63537,
+        "sha256": "71d7d3e34bf71b52bdba3b588b103bba8148ba28de5754083e01b3398e7a6e1c"
+      },
+      "canvaskit/skwasm.wasm": {
+        "bytes": 3593715,
+        "sha256": "e540fd5e8303b7b68ec2718cb49e9c421f8ade3075b15e02a7059a62654df9a1"
+      },
+      "canvaskit/skwasm_heavy.js": {
+        "bytes": 63650,
+        "sha256": "cec554b46ddcf4c0e63d799e0556d546f42d2c3f69316fb4f67ed776f6104558"
+      },
+      "canvaskit/skwasm_heavy.wasm": {
+        "bytes": 5216217,
+        "sha256": "565f5cc1cca6ab120f11934b105f01fec4b58b480c82e0889dca93af8e6f8635"
+      },
+      "flutter_bootstrap.js": {
+        "bytes": 13733,
+        "sha256": "52eb2bc7de77cedba340d3ce0619f57b65e21865c3c9c611ccbad02dbe32008d"
+      },
+      "main.dart.js": {
+        "bytes": 3784593,
+        "sha256": "efa471c805244acd389aade01290518a8f036d566ccb3b6cb96744473f317ad3"
+      },
+      "main.dart.mjs": {
+        "bytes": 30922,
+        "sha256": "991883c61e03ab0ee0a8c5753a7041e0c223597f8f409a7fbdf3f3a2ed81c4ab"
+      },
+      "main.dart.wasm": {
+        "bytes": 3153932,
+        "sha256": "f03fbb12af2214e96a04d1ac7a38b789d867fd77accf8bd8f6708ae88d1709a4"
+      }
+    },
+    "candidate": {
+      "canvaskit/skwasm.js": {
+        "bytes": 64200,
+        "sha256": "bf4a231af59e5e03e4cef73c5fe9dbe3de16c26f32fb294cec501250b2ea7008"
+      },
+      "canvaskit/skwasm.wasm": {
+        "bytes": 3621117,
+        "sha256": "f3fce996f942cba27c3c895ccef753ae0363ce74fc8b8df7a93239bee64f3a36"
+      },
+      "canvaskit/skwasm_heavy.js": {
+        "bytes": 64313,
+        "sha256": "9b153114a035c416cd69c767be6561ab64b6fafc8e381be79c2b9b9af7b0b897"
+      },
+      "canvaskit/skwasm_heavy.wasm": {
+        "bytes": 5240969,
+        "sha256": "15c68a8b337bf08872e698b126f57a179419a59d53315865c4a1682ae4cf0965"
+      },
+      "flutter_bootstrap.js": {
+        "bytes": 14952,
+        "sha256": "7c49b74df3bcb1f5829ab36eb6900490c7fd421dfcb81f37da749edea246a06a"
+      },
+      "main.dart.js": {
+        "bytes": 12740709,
+        "sha256": "9f14fb221a0061c57ba5cc2fc6e582689bfee578c6cc01971306bef6eebfdb05"
+      },
+      "main.dart.mjs": {
+        "bytes": 31583,
+        "sha256": "14b1eee44b636e234c87b402f737970803bb8fd902ce77ca2ff7026d22db5073"
+      },
+      "main.dart.wasm": {
+        "bytes": 4997891,
+        "sha256": "b37f42851d36a4035759b3434e19bba63332874f08b398d249a1fece1543ab8b"
+      }
+    },
+    "minimal-candidate": {
+      "canvaskit/skwasm.js": {
+        "bytes": 64200,
+        "sha256": "bf4a231af59e5e03e4cef73c5fe9dbe3de16c26f32fb294cec501250b2ea7008"
+      },
+      "canvaskit/skwasm.wasm": {
+        "bytes": 3621117,
+        "sha256": "f3fce996f942cba27c3c895ccef753ae0363ce74fc8b8df7a93239bee64f3a36"
+      },
+      "canvaskit/skwasm_heavy.js": {
+        "bytes": 64313,
+        "sha256": "9b153114a035c416cd69c767be6561ab64b6fafc8e381be79c2b9b9af7b0b897"
+      },
+      "canvaskit/skwasm_heavy.wasm": {
+        "bytes": 5240969,
+        "sha256": "15c68a8b337bf08872e698b126f57a179419a59d53315865c4a1682ae4cf0965"
+      },
+      "flutter_bootstrap.js": {
+        "bytes": 14952,
+        "sha256": "38231f9b23a17e808e7aafcdc3b790e259de73274336bb361b6ddf9181a2a505"
+      },
+      "main.dart.js": {
+        "bytes": 5454988,
+        "sha256": "36bf604ae71d95217a4bfc0864ccb4442da5f29feb449b5703c9a49d68829bf4"
+      },
+      "main.dart.mjs": {
+        "bytes": 30809,
+        "sha256": "e66a58a16b7964cec901a46891e49386d881aeab282b78494d0f62d7ea7a14f5"
+      },
+      "main.dart.wasm": {
+        "bytes": 2199744,
+        "sha256": "4696c1edc5b75c4ee86b0c8d468617ebad044d5c9f4f9401aa6f8413bb3caf78"
+      }
+    },
+    "minimal-stable": {
+      "canvaskit/skwasm.js": {
+        "bytes": 63537,
+        "sha256": "71d7d3e34bf71b52bdba3b588b103bba8148ba28de5754083e01b3398e7a6e1c"
+      },
+      "canvaskit/skwasm.wasm": {
+        "bytes": 3593715,
+        "sha256": "e540fd5e8303b7b68ec2718cb49e9c421f8ade3075b15e02a7059a62654df9a1"
+      },
+      "canvaskit/skwasm_heavy.js": {
+        "bytes": 63650,
+        "sha256": "cec554b46ddcf4c0e63d799e0556d546f42d2c3f69316fb4f67ed776f6104558"
+      },
+      "canvaskit/skwasm_heavy.wasm": {
+        "bytes": 5216217,
+        "sha256": "565f5cc1cca6ab120f11934b105f01fec4b58b480c82e0889dca93af8e6f8635"
+      },
+      "flutter_bootstrap.js": {
+        "bytes": 13649,
+        "sha256": "9f29446892f1216a4c388e94040e55360c94cf9d16f3987f4cb500144fc39c3e"
+      },
+      "main.dart.js": {
+        "bytes": 5296502,
+        "sha256": "eebed9d3b4c61198188280a15bd166f4df3ef49b5a095f6b01b16435d980dcb6"
+      },
+      "main.dart.mjs": {
+        "bytes": 31082,
+        "sha256": "571f5a8b4ac7ba56cead24f44ea36730f5c2e35edeeed1c61ae502a1a8988450"
+      },
+      "main.dart.wasm": {
+        "bytes": 2113992,
+        "sha256": "5cec2e7e45913b89446b15ba8127acdb9a8f3a876981909ffcc86bfaa62a1629"
+      }
+    },
+    "reference": {
+      "canvaskit/skwasm.js": {
+        "bytes": 63537,
+        "sha256": "71d7d3e34bf71b52bdba3b588b103bba8148ba28de5754083e01b3398e7a6e1c"
+      },
+      "canvaskit/skwasm.wasm": {
+        "bytes": 3593715,
+        "sha256": "e540fd5e8303b7b68ec2718cb49e9c421f8ade3075b15e02a7059a62654df9a1"
+      },
+      "canvaskit/skwasm_heavy.js": {
+        "bytes": 63650,
+        "sha256": "cec554b46ddcf4c0e63d799e0556d546f42d2c3f69316fb4f67ed776f6104558"
+      },
+      "canvaskit/skwasm_heavy.wasm": {
+        "bytes": 5216217,
+        "sha256": "565f5cc1cca6ab120f11934b105f01fec4b58b480c82e0889dca93af8e6f8635"
+      },
+      "flutter_bootstrap.js": {
+        "bytes": 14726,
+        "sha256": "a1474548c067bc632fc3465abe1792c649c8889be3ef35e343daebf086aec4e3"
+      },
+      "main.dart.js": {
+        "bytes": 7001834,
+        "sha256": "859f33dd874854de8b993d859e30fdca88bd6e9238277be14d3c2116bcb6ff23"
+      },
+      "main.dart.mjs": {
+        "bytes": 31507,
+        "sha256": "0918c076fa99bb84abfcb08366fea2f3c1a0e9dea9649453f5082ccf4c85289e"
+      },
+      "main.dart.wasm": {
+        "bytes": 2745517,
+        "sha256": "a34af132493bfbc0fd53bfa24905e73dd839880d743e064cfdf1f69b25bd463f"
+      }
+    }
+  }
+}

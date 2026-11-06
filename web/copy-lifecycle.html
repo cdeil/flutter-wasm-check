@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><title>Canvas buffer lifecycle check</title>
+  <style>
+    body {
+      font: 14px system-ui;
+      margin: 20px;
+    }
+    #cases {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    canvas {
+      width: 180px;
+      height: 180px;
+      border: 1px solid black;
+    }
+    pre {
+      white-space: pre-wrap;
+    }
+  </style>
+  <h1>Canvas buffer lifecycle check</h1>
+  <p>
+    Untimed diagnostic. A post-presentation source snapshot with
+    preserveDrawingBuffer=false is not a displayed-pixel assertion.
+  </p>
+  <div id="cases"></div>
+  <pre id="result">Running…</pre>
+  <script type="module">
+    const results = [];
+    for (const alpha of [true, false])
+      for (const preserveDrawingBuffer of [false, true]) {
+        const card = document.createElement("div");
+        card.textContent = `alpha=${alpha}, preserve=${preserveDrawingBuffer}`;
+        const visible = document.createElement("canvas");
+        visible.width = visible.height = 512;
+        card.append(document.createElement("br"), visible);
+        document.querySelector("#cases").append(card);
+        const source = visible.transferControlToOffscreen();
+        const gl = source.getContext("webgl2", {
+          alpha,
+          antialias: false,
+          preserveDrawingBuffer,
+        });
+        if (!gl) throw Error("WebGL2 unavailable");
+        gl.clearColor(0.8, 0.2, 0.4, 1);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        const immediate = new Uint8Array(4);
+        gl.readPixels(0, 0, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, immediate);
+        await new Promise((r) =>
+          requestAnimationFrame(() => requestAnimationFrame(r)),
+        );
+        const snapshot = document.createElement("canvas");
+        snapshot.width = snapshot.height = 1;
+        const ctx = snapshot.getContext("2d");
+        ctx.drawImage(visible, 0, 0, 1, 1);
+        results.push({
+          alpha,
+          preserveDrawingBuffer,
+          actualAttributes: gl.getContextAttributes(),
+          immediateDrawingBuffer: [...immediate],
+          visibleSourceAfterTwoRaf: [...ctx.getImageData(0, 0, 1, 1).data],
+        });
+      }
+    window.lifecycleResult = { userAgent: navigator.userAgent, results };
+    document.querySelector("#result").textContent = JSON.stringify(
+      lifecycleResult,
+      null,
+      2,
+    );
+    const q = new URLSearchParams(location.search);
+    if (q.get("save") === "1")
+      await fetch("/result", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          label: q.get("label") || "lifecycle",
+          lifecycle: lifecycleResult,
+        }),
+      });
+  </script>
+</html>

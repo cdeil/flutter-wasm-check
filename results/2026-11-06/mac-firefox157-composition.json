@@ -1,0 +1,1366 @@
+{
+  "browser": "mac-firefox157",
+  "version": "157.0",
+  "records": [
+    {
+      "hybrid": 0,
+      "mode": "wasm",
+      "passed": true,
+      "roundTrips": 3,
+      "identicalRestoredPlot": true,
+      "beforeBytes": 198252,
+      "transitions": [
+        {
+          "rep": 0,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Select a row or inspect a point",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/b6bdf800-488a-4ac6-a41f-e149c6c161ce",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/b6bdf800-488a-4ac6-a41f-e149c6c161ce",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        },
+        {
+          "rep": 1,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/b6bdf800-488a-4ac6-a41f-e149c6c161ce",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/b6bdf800-488a-4ac6-a41f-e149c6c161ce",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        },
+        {
+          "rep": 2,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/b6bdf800-488a-4ac6-a41f-e149c6c161ce",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/b6bdf800-488a-4ac6-a41f-e149c6c161ce",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "hybrid": 0,
+      "mode": "st",
+      "passed": true,
+      "roundTrips": 3,
+      "identicalRestoredPlot": true,
+      "beforeBytes": 198252,
+      "transitions": [
+        {
+          "rep": 0,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Select a row or inspect a point",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        },
+        {
+          "rep": 1,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        },
+        {
+          "rep": 2,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 0,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "hybrid": 1,
+      "mode": "wasm",
+      "passed": true,
+      "roundTrips": 3,
+      "identicalRestoredPlot": true,
+      "beforeBytes": 198252,
+      "transitions": [
+        {
+          "rep": 0,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Select a row or inspect a point",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/4c7df96f-1ba2-4ca9-b203-43984dadb40d",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/4c7df96f-1ba2-4ca9-b203-43984dadb40d",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        },
+        {
+          "rep": 1,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/4c7df96f-1ba2-4ca9-b203-43984dadb40d",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/4c7df96f-1ba2-4ca9-b203-43984dadb40d",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        },
+        {
+          "rep": 2,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/4c7df96f-1ba2-4ca9-b203-43984dadb40d",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [
+              {
+                "url": "blob:http://localhost:8787/4c7df96f-1ba2-4ca9-b203-43984dadb40d",
+                "name": null
+              }
+            ],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "hybrid": 1,
+      "mode": "st",
+      "passed": true,
+      "roundTrips": 3,
+      "identicalRestoredPlot": true,
+      "beforeBytes": 198252,
+      "transitions": [
+        {
+          "rep": 0,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Select a row or inspect a point",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        },
+        {
+          "rep": 1,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        },
+        {
+          "rep": 2,
+          "proof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": true,
+              "overlay": true,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          },
+          "restoredProof": {
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:157.0) Gecko/20100101 Firefox/157.0",
+            "isolated": true,
+            "state": {
+              "wasm": true,
+              "page": "composition",
+              "rows": 2500,
+              "points": 1000,
+              "series": 8,
+              "phase": 0,
+              "animate": false,
+              "platformView": false,
+              "overlay": false,
+              "selected": "Overlay action clicked",
+              "dark": false
+            },
+            "errors": [],
+            "resources": [
+              "/candidate/canvaskit/skwasm_heavy.wasm",
+              "/candidate/canvaskit/skwasm_heavy.js",
+              "/candidate/main.dart.mjs",
+              "/candidate/main.dart.wasm"
+            ],
+            "workers": [],
+            "onscreenTransfers": 1,
+            "viewport": {
+              "width": 1440,
+              "height": 900,
+              "dpr": 1
+            },
+            "canvases": [
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": false,
+                "visibility": "hidden",
+                "parent": "FLT-CANVAS-CONTAINER"
+              },
+              {
+                "width": 1440,
+                "height": 900,
+                "cssWidth": 1440,
+                "cssHeight": 900,
+                "transferred": true,
+                "visibility": "visible",
+                "parent": "FLT-CANVAS-CONTAINER"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

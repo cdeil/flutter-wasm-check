@@ -1,0 +1,117 @@
+{
+  "note": "Core runtime + app artifacts only. Shared fonts/assets/bootstrap excluded equally; optional browser-specific variants and fallback not downloaded twice. Brotli quality 11, gzip 9; byte counts do not measure latency.",
+  "runtimes": {
+    "js": {
+      "artifacts": [
+        {
+          "file": "main.dart.js",
+          "raw": 3784532,
+          "gzip": 1106437,
+          "brotli": 849935
+        },
+        {
+          "file": "canvaskit/canvaskit.js",
+          "raw": 86987,
+          "gzip": 27493,
+          "brotli": 24371
+        },
+        {
+          "file": "canvaskit/canvaskit.wasm",
+          "raw": 7284602,
+          "gzip": 2911112,
+          "brotli": 2258101
+        }
+      ],
+      "raw": 11156121,
+      "gzip": 4045042,
+      "brotli": 3132407
+    },
+    "jsChromium": {
+      "artifacts": [
+        {
+          "file": "main.dart.js",
+          "raw": 3784532,
+          "gzip": 1106437,
+          "brotli": 849935
+        },
+        {
+          "file": "canvaskit/chromium/canvaskit.js",
+          "raw": 86226,
+          "gzip": 27279,
+          "brotli": 24146
+        },
+        {
+          "file": "canvaskit/chromium/canvaskit.wasm",
+          "raw": 5428806,
+          "gzip": 2059127,
+          "brotli": 1540529
+        }
+      ],
+      "raw": 9299564,
+      "gzip": 3192843,
+      "brotli": 2414610
+    },
+    "wasm": {
+      "artifacts": [
+        {
+          "file": "main.dart.mjs",
+          "raw": 30922,
+          "gzip": 7257,
+          "brotli": 6328
+        },
+        {
+          "file": "main.dart.wasm",
+          "raw": 3153844,
+          "gzip": 1157743,
+          "brotli": 905477
+        },
+        {
+          "file": "canvaskit/skwasm.js",
+          "raw": 63537,
+          "gzip": 17054,
+          "brotli": 14886
+        },
+        {
+          "file": "canvaskit/skwasm.wasm",
+          "raw": 3593715,
+          "gzip": 1536881,
+          "brotli": 1209789
+        }
+      ],
+      "raw": 6842018,
+      "gzip": 2718935,
+      "brotli": 2136480
+    },
+    "wasmHeavy": {
+      "artifacts": [
+        {
+          "file": "main.dart.mjs",
+          "raw": 30922,
+          "gzip": 7257,
+          "brotli": 6328
+        },
+        {
+          "file": "main.dart.wasm",
+          "raw": 3153844,
+          "gzip": 1157743,
+          "brotli": 905477
+        },
+        {
+          "file": "canvaskit/skwasm_heavy.js",
+          "raw": 63650,
+          "gzip": 17063,
+          "brotli": 14903
+        },
+        {
+          "file": "canvaskit/skwasm_heavy.wasm",
+          "raw": 5216217,
+          "gzip": 2285596,
+          "brotli": 1859227
+        }
+      ],
+      "raw": 8464633,
+      "gzip": 3467659,
+      "brotli": 2785935
+    }
+  }
+}

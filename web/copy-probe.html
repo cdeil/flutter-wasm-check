@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><title>Canvas transfer experiment</title>
+  <style>
+    body {
+      font: 14px system-ui;
+      margin: 20px;
+    }
+    canvas {
+      max-width: 46vw;
+      max-height: 40vh;
+      border: 1px solid #222;
+    }
+    pre {
+      white-space: pre-wrap;
+    }
+  </style>
+  <h1>Canvas transfer experiment</h1>
+  <p>
+    Synthetic WebGL clear; warm-up 10, measured 100 operations. API submission
+    timings, not displayed FPS.
+  </p>
+  <button onclick="run()">Run experiment</button>
+  <pre id="status">Starting…</pre>
+  <div id="canvases"></div>
+  <script type="module">
+    const query = new URLSearchParams(location.search);
+    const median = (a) =>
+      [...a].sort((a, b) => a - b)[Math.floor(a.length / 2)];
+    const p95 = (a) =>
+      [...a].sort((a, b) => a - b)[Math.floor((a.length - 1) * 0.95)];
+    const summarize = (a) => ({ median: median(a), p95: p95(a) });
+    function setup(canvas, alpha) {
+      const gl = canvas.getContext("webgl2", {
+        alpha,
+        antialias: false,
+        preserveDrawingBuffer: false,
+      });
+      if (!gl) throw Error("WebGL2 unavailable");
+      const ext = gl.getExtension("WEBGL_debug_renderer_info");
+      return {
+        gl,
+        renderer: ext
+          ? gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)
+          : gl.getParameter(gl.RENDERER),
+      };
+    }
+    window.run = async () => {
+      const results = [];
+      const sizes = (query.get("sizes") || "512,1024,2048")
+        .split(",")
+        .map(Number);
+      for (const size of sizes)
+        for (const alpha of [true, false])
+          for (const method of ["bitmap", "direct"]) {
+            document.querySelector("#status").textContent =
+              `Running ${size}, alpha=${alpha}, ${method}`;
+            document.querySelector("#canvases").replaceChildren();
+            const visible = document.createElement("canvas");
+            visible.width = visible.height = size;
+            document.querySelector("#canvases").append(visible);
+            const source =
+              method === "bitmap"
+                ? new OffscreenCanvas(size, size)
+                : visible.transferControlToOffscreen();
+            const { gl, renderer } = setup(source, alpha);
+            const dest =
+              method === "bitmap" ? visible.getContext("bitmaprenderer") : null;
+            const samples = [];
+            for (let i = 0; i < 110; i++) {
+              const start = performance.now();
+              gl.clearColor((i % 2) * 0.8, 0.2, 0.4, 1);
+              gl.clear(gl.COLOR_BUFFER_BIT);
+              const draw = performance.now();
+              const bitmap =
+                method === "bitmap" ? source.transferToImageBitmap() : null;
+              const transfer = performance.now();
+              if (dest) dest.transferFromImageBitmap(bitmap);
+              const end = performance.now();
+              if (i >= 10)
+                samples.push({
+                  draw: draw - start,
+                  toBitmap: transfer - draw,
+                  fromBitmap: end - transfer,
+                  total: end - start,
+                });
+            }
+            // Verify the last submitted pixels separately, outside measured operations.
+            await new Promise((r) =>
+              requestAnimationFrame(() => requestAnimationFrame(r)),
+            );
+            const verify = document.createElement("canvas");
+            verify.width = verify.height = 1;
+            const ctx = verify.getContext("2d", { willReadFrequently: true });
+            ctx.drawImage(visible, 0, 0, 1, 1);
+            const pixel = [...ctx.getImageData(0, 0, 1, 1).data];
+            const correct =
+              Math.abs(pixel[0] - 204) < 4 &&
+              Math.abs(pixel[1] - 51) < 4 &&
+              Math.abs(pixel[2] - 102) < 4 &&
+              pixel[3] === 255;
+            results.push({
+              size,
+              alpha,
+              method,
+              renderer,
+              pixel,
+              correct,
+              samples,
+              summary: Object.fromEntries(
+                ["draw", "toBitmap", "fromBitmap", "total"].map((k) => [
+                  k,
+                  summarize(samples.map((x) => x[k])),
+                ]),
+              ),
+            });
+            gl.getExtension("WEBGL_lose_context")?.loseContext();
+            await new Promise((r) => setTimeout(r, 100));
+          }
+      window.copyResult = {
+        userAgent: navigator.userAgent,
+        isolated: crossOriginIsolated,
+        results,
+      };
+      document.querySelector("#status").textContent = JSON.stringify(
+        { ...copyResult, results: results.map(({ samples, ...r }) => r) },
+        null,
+        2,
+      );
+      if (query.get("save") === "1")
+        await fetch("/result", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            label: query.get("label") || "native-copy",
+            copy: copyResult,
+          }),
+        });
+    };
+    run();
+  </script>
+</html>

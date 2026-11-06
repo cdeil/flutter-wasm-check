@@ -1,0 +1,24 @@
+[submodule "references/flutter-wasm-compare"]
+	path = references/flutter-wasm-compare
+	url = https://github.com/kevmoo/flutter-wasm-compare.git
+[submodule "references/flutter"]
+	path = references/flutter
+	url = https://github.com/flutter/flutter.git
+[submodule "references/firefox"]
+	path = references/firefox
+	url = https://github.com/mozilla-firefox/firefox.git
+[submodule "references/trina-grid"]
+	path = references/trina-grid
+	url = https://github.com/doonfrs/trina_grid.git
+[submodule "references/fl-chart"]
+	path = references/fl-chart
+	url = https://github.com/imaNNeo/fl_chart.git
+[submodule "references/syncfusion"]
+	path = references/syncfusion
+	url = https://github.com/syncfusion/flutter-widgets.git
+[submodule "references/graphic"]
+	path = references/graphic
+	url = https://github.com/entronad/graphic.git
+[submodule "references/flutter-hybrid"]
+	path = references/flutter-hybrid
+	url = https://github.com/MarlonJD/flutter.git

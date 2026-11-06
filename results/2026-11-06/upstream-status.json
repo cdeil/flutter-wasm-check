@@ -1,0 +1,131 @@
+[
+  {
+    "url": "https://github.com/flutter/flutter/issues/178893",
+    "issue_number": 178893,
+    "title": "[web] Enable WebAssembly for latest Safari [Safari 26.0.1]",
+    "state": "open",
+    "state_reason": null,
+    "updated_at": "2026-09-08T06:06:38Z",
+    "closed_at": null
+  },
+  {
+    "url": "https://github.com/flutter/flutter/issues/145420",
+    "issue_number": 145420,
+    "title": "[web] Adopt single-context OffscreenCanvas rendering on Safari and Firefox (blocked by slow ImageBitmap transfer)",
+    "state": "open",
+    "state_reason": null,
+    "updated_at": "2026-09-21T22:38:20Z",
+    "closed_at": null
+  },
+  {
+    "url": "https://github.com/flutter/flutter/issues/175624",
+    "issue_number": 175624,
+    "title": "[meta] Remaining work to unify CanvasKit and Skwasm backends",
+    "state": "open",
+    "state_reason": null,
+    "updated_at": "2026-10-28T17:47:25Z",
+    "closed_at": null
+  },
+  {
+    "url": "https://github.com/flutter/flutter/issues/188796",
+    "issue_number": 188796,
+    "title": "[web][skwasm] Safari 26+ Skwasm default enablement readiness",
+    "state": "closed",
+    "state_reason": "completed",
+    "updated_at": "2026-07-24T13:28:50Z",
+    "closed_at": "2026-06-30T19:15:50Z"
+  },
+  {
+    "url": "https://github.com/flutter/flutter/issues/187660",
+    "issue_number": 187660,
+    "title": "[web][skwasm] Design proposal: make Skwasm usable on Safari and Firefox without relying on slow ImageBitmap transfers",
+    "state": "closed",
+    "state_reason": "completed",
+    "updated_at": "2026-07-15T14:30:30Z",
+    "closed_at": "2026-07-01T14:01:10Z"
+  },
+  {
+    "url": "https://github.com/flutter/flutter/pull/195103",
+    "number": 195103,
+    "title": "[web] Support Skwasm rendering without bitmap capture",
+    "state": "closed",
+    "draft": false,
+    "merged": true,
+    "merged_at": "2026-11-05T15:38:35Z",
+    "head_sha": "ed6efe61f05ce56202a8ad5a8e2c583e1b15805a",
+    "merge_commit_sha": "c3f332d1739d0fc0a0713b939458ddf04d9b2287",
+    "updated_at": "2026-11-05T18:14:10Z"
+  },
+  {
+    "url": "https://github.com/flutter/flutter/pull/195104",
+    "number": 195104,
+    "title": "[web] Commit platform-view DOM after rasterization",
+    "state": "open",
+    "draft": false,
+    "merged": false,
+    "merged_at": null,
+    "head_sha": "fc69b195e6b316dadb423b197830d1d015eb9ec1",
+    "merge_commit_sha": null,
+    "updated_at": "2026-11-05T18:21:47Z"
+  },
+  {
+    "url": "https://github.com/flutter/flutter/pull/195105",
+    "number": 195105,
+    "title": "[web] Add opt-in hybrid Skwasm canvas presentation",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "merged_at": null,
+    "head_sha": "b09e6cabd227035bc209757ae9586b7454049797",
+    "merge_commit_sha": null,
+    "updated_at": "2026-11-01T13:24:12Z"
+  },
+  {
+    "url": "https://github.com/flutter/flutter/pull/195106",
+    "number": 195106,
+    "title": "[web] Enable hybrid Skwasm presentation on selected desktop configurations",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "merged_at": null,
+    "head_sha": "6545049ce4177d712e5541ad0b7658a84053d247",
+    "merge_commit_sha": null,
+    "updated_at": "2026-11-01T13:24:12Z"
+  },
+  {
+    "url": "https://github.com/flutter/flutter/pull/188628",
+    "number": 188628,
+    "title": "[web] Record end-to-end presentation duration in benchmarks",
+    "state": "closed",
+    "draft": false,
+    "merged": true,
+    "merged_at": "2026-10-30T00:26:12Z",
+    "head_sha": "86e355fb34234aee87eac811e231955a3571edfc",
+    "merge_commit_sha": "d555faf8009b522cd863a9bce116dc8182f5669c",
+    "updated_at": "2026-10-30T00:26:17Z"
+  },
+  {
+    "url": "https://github.com/flutter/flutter/pull/193187",
+    "number": 193187,
+    "title": "[web] Enable Firefox Skwasm UI CI suites, configure COI configs, and fail fast on loader rejections",
+    "state": "closed",
+    "draft": false,
+    "merged": true,
+    "merged_at": "2026-09-25T19:09:14Z",
+    "head_sha": "16ecc8e7cb11731579a786330652554fb577f39c",
+    "merge_commit_sha": "5b41d8b1f716c9172f5ebfa908949f4544946cd5",
+    "updated_at": "2026-10-08T18:50:18Z"
+  },
+  {
+    "url": "https://github.com/flutter/flutter/pull/193681",
+    "number": 193681,
+    "title": "Enable Safari dart2wasm/skwasm CI suites on macOS 26.6",
+    "state": "closed",
+    "draft": false,
+    "merged": true,
+    "merged_at": "2026-10-05T19:20:07Z",
+    "head_sha": "c2f9df43f043d2eb8750e34fd3f644b90334edc6",
+    "merge_commit_sha": "d7fe60992f6c9e35d56169c68ad15d4e56ab9d84",
+    "updated_at": "2026-10-26T18:45:32Z"
+  }
+]
