@@ -48,7 +48,7 @@ limitation, not evidence that this patch has shipped in a supported SDK.
 ## A/B method and runtime proof
 
 The only A/B switch within a candidate bundle is `?hybrid=0` versus `?hybrid=1`
-(`enableSkwasmHybridCanvas` in the loader configuration). Each is tested with
+(`skwasmUseHybridRasterizer` in the loader configuration). Each is tested with
 worker Wasm and forced single-threaded Wasm under `require-corp` isolation.
 Stable comparisons use a different engine/SDK and cannot isolate this flag.
 

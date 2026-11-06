@@ -13,16 +13,30 @@ const mime = {
   ".ttf": "font/ttf",
   ".otf": "font/otf",
   ".png": "image/png",
+  ".svg": "image/svg+xml",
 };
 http
   .createServer(async (req, res) => {
     const url = new URL(req.url, "http://localhost");
     const coep =
       url.searchParams.get("coep") || process.env.COEP || "require-corp";
-    res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
-    res.setHeader("Cross-Origin-Embedder-Policy", coep);
+    const coop = url.searchParams.get("coop") || "same-origin";
+    if (coop !== "none") res.setHeader("Cross-Origin-Opener-Policy", coop);
+    if (coep !== "none") res.setHeader("Cross-Origin-Embedder-Policy", coep);
     res.setHeader("Cross-Origin-Resource-Policy", "same-origin");
     res.setHeader("Cache-Control", "no-store");
+    if (url.pathname === "/probe-resource.svg") {
+      const corp = url.searchParams.get("corp") || "none";
+      if (corp === "none") res.removeHeader("Cross-Origin-Resource-Policy");
+      else res.setHeader("Cross-Origin-Resource-Policy", corp);
+      if (url.searchParams.get("cors") === "1")
+        res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader("Content-Type", "image/svg+xml");
+      res.end(
+        '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect width="32" height="32" fill="#16a34a"/></svg>',
+      );
+      return;
+    }
     if (url.pathname === "/screenshot-gate") {
       const key = url.searchParams.get("label");
       const timer = setTimeout(() => {
@@ -85,22 +99,20 @@ http
       "Content-Type",
       mime[path.extname(file)] || "application/octet-stream",
     );
-    if (
-      path.extname(file) === ".html" &&
-      path.basename(file) === "index.html"
-    ) {
+    if (path.extname(file) === ".html") {
       const prefix =
         pathname.match(
           /^\/(final-profile|final-release|profile|release|reference|candidate|minimal-candidate|minimal-stable)\//,
         )?.[1] || "release";
-      let html = fs
-        .readFileSync(file, "utf8")
-        .replace(/<base href="[^"]*">/, `<base href="/${prefix}/">`);
-      if (url.searchParams.get("gate") === "1")
-        html = html.replace(
-          "</body>",
-          `<img alt="" style="display:none" src="/screenshot-gate?label=${encodeURIComponent(url.searchParams.get("label") || "native")}"></body>`,
-        );
+      let html = fs.readFileSync(file, "utf8");
+      if (path.basename(file) === "index.html")
+        html = html.replace(/<base href="[^"]*">/, `<base href="/${prefix}/">`);
+      if (url.searchParams.get("gate") === "1") {
+        const gate = `<img alt="" style="display:none" src="/screenshot-gate?label=${encodeURIComponent(url.searchParams.get("label") || "native")}">`;
+        html = /<\/body\s*>/i.test(html)
+          ? html.replace(/<\/body\s*>/i, `${gate}</body>`)
+          : html + gate;
+      }
       res.end(html);
       return;
     }

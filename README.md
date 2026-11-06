@@ -4,6 +4,8 @@ browser mix and interactive app that I actually need to support?
 
 # Flutter Wasm Check
 
+[![Browser status, blockers and steps toward upstream contributions](docs/assets/wasm-status.svg)](docs/followup-validation-2026-11-06.md)
+
 The rendering gains are real, but they are workload-dependent. With meaningful
 Firefox use and some Safari use, I do not yet consider an all-browser Wasm
 switch ready. Both browsers can run opted-in Wasm; Flutter still selects its
@@ -72,6 +74,8 @@ chart libraries or a recommendation to replace a grid.
   local build procedure, bitmap/hybrid A/B results and composition checks.
 - [Upstream investigation](docs/upstream-investigation.md): source paths,
   existing issues/PRs, what is worth contributing, and what is not a confirmed bug.
+- [Follow-up validation](docs/followup-validation-2026-11-06.md): standalone
+  isolation/shared-memory controls and a tested Firefox single-thread engine-lane patch.
 - [Unposted drafts](drafts/): concise starting points for human review.
 - [Sources and licenses](docs/sources.md): pinned Git submodules and package releases.
 

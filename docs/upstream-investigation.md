@@ -96,11 +96,18 @@ renderer correctness.
 CI lanes. Those are concrete progress, already merged. They should not be
 proposed again or mistaken for all-browser default enablement.
 
-Safari's `credentialless` isolation result is reproducible in a standalone
-page. A narrow docs/diagnostic contribution could emphasize checking
-`crossOriginIsolated` and worker creation rather than assuming header presence
-means multithreading. First check existing documentation; the current guide
-already lists `require-corp` as an alternative.
+The [standalone follow-up](followup-validation-2026-11-06.md) now verifies
+delivered headers, actual worker execution and a shared Wasm-memory round trip.
+Real Safari 27.2 isolates with `require-corp` and does not with `credentialless`,
+even though both workers execute. [WebKit 230550](https://bugs.webkit.org/show_bug.cgi?id=230550)
+already tracks the missing policy. The current guide lists both header values;
+the saved docs proposal adds a runtime diagnostic and resource-permission caveat.
+It does not duplicate the list or propose another browser bug.
+
+The follow-up also adds a concrete, unposted Firefox single-thread test/CI
+patch: the full 54-case unit bundle passes with zero skips on both CI-pinned
+Firefox 148 and current 159. This exercises the two mocks skipped in worker
+mode and includes the builder's explicit suite selections.
 
 For [178893](https://github.com/flutter/flutter/issues/178893), offer the real
 Safari screenshots, exact heavy-renderer/worker proof and a bounded test matrix.

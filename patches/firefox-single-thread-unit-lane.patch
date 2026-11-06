@@ -1,0 +1,44 @@
+diff --git i/engine/src/flutter/ci/builders/linux_web_engine_test.json w/engine/src/flutter/ci/builders/linux_web_engine_test.json
+index 10f1d8741..6fd387344 100644
+--- i/engine/src/flutter/ci/builders/linux_web_engine_test.json
++++ w/engine/src/flutter/ci/builders/linux_web_engine_test.json
+@@ -438,6 +438,7 @@
+             "--suite=firefox-dart2js-canvaskit-ui",
+             "--suite=firefox-dart2wasm-skwasm-ui",
+             "--suite=firefox-coi-dart2wasm-skwasm-ui",
++            "--suite=firefox-dart2wasm-skwasm-skwasm",
+             "--suite=firefox-coi-dart2wasm-skwasm-skwasm",
+             "--suite=firefox-dart2wasm-canvaskit-engine",
+             "--suite=firefox-fallbacks"
+@@ -489,6 +490,15 @@
+           ],
+           "script": "flutter/lib/web_ui/dev/felt"
+         },
++        {
++          "name": "run suite firefox-dart2wasm-skwasm-skwasm",
++          "parameters": [
++            "test",
++            "--run",
++            "--suite=firefox-dart2wasm-skwasm-skwasm"
++          ],
++          "script": "flutter/lib/web_ui/dev/felt"
++        },
+         {
+           "name": "run suite firefox-coi-dart2wasm-skwasm-skwasm",
+           "parameters": [
+diff --git i/engine/src/flutter/lib/web_ui/test/felt_config.yaml w/engine/src/flutter/lib/web_ui/test/felt_config.yaml
+index 39e39606e..e3df49d44 100644
+--- i/engine/src/flutter/lib/web_ui/test/felt_config.yaml
++++ w/engine/src/flutter/lib/web_ui/test/felt_config.yaml
+@@ -246,6 +246,11 @@ test-suites:
+     run-config: firefox-coi-wasm
+     artifact-deps: [ skwasm ]
+ 
++  - name: firefox-dart2wasm-skwasm-skwasm
++    test-bundle: dart2wasm-skwasm-skwasm
++    run-config: firefox-wasm
++    artifact-deps: [ skwasm ]
++
+   - name: firefox-coi-dart2wasm-skwasm-skwasm
+     test-bundle: dart2wasm-skwasm-skwasm
+     run-config: firefox-coi-wasm

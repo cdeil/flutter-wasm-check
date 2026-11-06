@@ -17,7 +17,7 @@ These are browser-feature dates, not dates when this app was fully qualified.
 
 | Browser lane | What was actually established |
 | --- | --- |
-| macOS Safari 27.2 | Visible Wasm grids/charts, real worker rendering under `require-corp`, JavaScript controls, local candidate composition cycles |
+| macOS Safari 27.2 | Visible Wasm grids/charts, isolation/worker proof under `require-corp`, JavaScript controls, local candidate composition cycles |
 | macOS installed Firefox 159.0.1 | Visible opted-in Wasm grid, default JavaScript fallback, bitmap cost reproduced |
 | macOS/Linux Playwright Firefox 157 | Patched Playwright build used for automated app/compiler comparisons; not a substitute for vendor Firefox |
 | Linux vendor Firefox 159.0.1 / Nightly 162.0a1 | Release binary renders all six pages in headless screenshots, retains default JS fallback, and runs same-candidate worker A/B; Nightly is a separate copy-probe check |
@@ -34,6 +34,11 @@ On the tested real Safari 27.2, `COEP: credentialless` with
 `COOP: same-origin` left `crossOriginIsolated=false`. The app still rendered
 with single-threaded Skwasm. `COEP: require-corp` produced isolation and a worker.
 The Syncfusion grid remained visible with credentialless isolation unavailable.
+
+The [standalone follow-up](followup-validation-2026-11-06.md) now checks an actual
+shared Wasm-memory round trip in file and blob module workers. It confirms the
+same Safari policy boundary. WebKit's missing credentialless policy is tracked
+separately in [230550](https://bugs.webkit.org/show_bug.cgi?id=230550).
 
 ![Real Safari: visible Wasm despite credentialless not yielding isolation](../results/2026-11-06/screenshots/mac-safari27-credentialless-syncgrid.png)
 

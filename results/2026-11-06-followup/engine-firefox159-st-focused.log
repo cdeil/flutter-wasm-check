@@ -1,0 +1,106 @@
+Running `dart pub get` in 'engine/src/flutter/lib/web_ui'
+Copied artifacts: Skwasm
+Current git branch (null) is not "main" or "master", so golden files are not checked.
+Created SkiaGoldClient. Dimensions: {Platform: linux, Browser: firefox, Wasm: true, Renderer: skwasm_st, CanvasKitVariant: full}
+[firefox-dart2wasm-skwasm-skwasm] Running...
+00:00 +0: loading hybrid_canvas_rasterizer_test.dart
+00:00 +0: loading hybrid_canvas_rasterizer_test.dart
+Browser: Mozilla Firefox 159.0.1
+[Firefox:stderr] *** You are running in headless mode.
+[Firefox:stdout] [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+00:01 +0: hybrid_canvas_rasterizer_test.dart: (setUpAll)
+00:01 +0: hybrid_canvas_rasterizer_test.dart: renders the first frame as a bitmap and promotes after metrics stabilize
+00:01 +1: hybrid_canvas_rasterizer_test.dart: renders the first frame as a bitmap and promotes after metrics stabilize
+00:01 +1: hybrid_canvas_rasterizer_test.dart: continuous resize does not render or read back the direct surface
+00:01 +2: hybrid_canvas_rasterizer_test.dart: continuous resize does not render or read back the direct surface
+00:01 +2: hybrid_canvas_rasterizer_test.dart: failed direct setup keeps bitmaps and permits a later promotion (false)
+00:01 +3: hybrid_canvas_rasterizer_test.dart: failed direct setup keeps bitmaps and permits a later promotion (false)
+00:01 +3: hybrid_canvas_rasterizer_test.dart: failed direct setup keeps bitmaps and permits a later promotion (true)
+00:01 +4: hybrid_canvas_rasterizer_test.dart: failed direct setup keeps bitmaps and permits a later promotion (true)
+00:01 +4: hybrid_canvas_rasterizer_test.dart: readback errors keep the completed bitmap visible
+00:01 +5: hybrid_canvas_rasterizer_test.dart: readback errors keep the completed bitmap visible
+00:01 +5: hybrid_canvas_rasterizer_test.dart: a failed direct render preserves the old frame until bitmap export completes
+00:01 +6: hybrid_canvas_rasterizer_test.dart: a failed direct render preserves the old frame until bitmap export completes
+00:01 +6: hybrid_canvas_rasterizer_test.dart: a missing readback context retains bitmap presentation without retrying
+00:01 +7: hybrid_canvas_rasterizer_test.dart: a missing readback context retains bitmap presentation without retrying
+00:01 +7: hybrid_canvas_rasterizer_test.dart: preserves direct pixels and DOM until all exit layers are ready
+00:01 +8: hybrid_canvas_rasterizer_test.dart: preserves direct pixels and DOM until all exit layers are ready
+00:01 +8: hybrid_canvas_rasterizer_test.dart: shares bitmap export safely across views of different sizes
+00:01 +9: hybrid_canvas_rasterizer_test.dart: shares bitmap export safely across views of different sizes
+00:01 +9: hybrid_canvas_rasterizer_test.dart: ImageBitmap survives transitions, multiple views, and context loss
+00:01 +10: hybrid_canvas_rasterizer_test.dart: ImageBitmap survives transitions, multiple views, and context loss
+00:01 +10: hybrid_canvas_rasterizer_test.dart: HTMLCanvasElement survives transitions, multiple views, and context loss
+00:01 +11: hybrid_canvas_rasterizer_test.dart: HTMLCanvasElement survives transitions, multiple views, and context loss
+00:01 +11: hybrid_canvas_rasterizer_test.dart: VideoFrame survives transitions, multiple views, and context loss
+00:01 +12: hybrid_canvas_rasterizer_test.dart: VideoFrame survives transitions, multiple views, and context loss
+00:01 +12: hybrid_canvas_rasterizer_test.dart: pending pictures retain a texture after its image is disposed
+00:01 +13: hybrid_canvas_rasterizer_test.dart: pending pictures retain a texture after its image is disposed
+00:01 +13: hybrid_canvas_rasterizer_test.dart: fragment shader samplers survive transitions and context loss
+00:01 +14: hybrid_canvas_rasterizer_test.dart: fragment shader samplers survive transitions and context loss
+00:01 +14: hybrid_canvas_rasterizer_test.dart: a failed export preserves the active frame and permits another draw
+00:01 +15: hybrid_canvas_rasterizer_test.dart: a failed export preserves the active frame and permits another draw
+00:01 +15: hybrid_canvas_rasterizer_test.dart: updates DPR without resizing the visible direct surface during export
+00:01 +16: hybrid_canvas_rasterizer_test.dart: updates DPR without resizing the visible direct surface during export
+00:01 +16: hybrid_canvas_rasterizer_test.dart: recovers presentation after context loss
+00:01 +17: hybrid_canvas_rasterizer_test.dart: recovers presentation after context loss
+00:01 +17: hybrid_canvas_rasterizer_test.dart: observes a DPR change that arrives during a pending direct frame
+00:02 +17: hybrid_canvas_rasterizer_test.dart: observes a DPR change that arrives during a pending direct frame
+00:02 +18: hybrid_canvas_rasterizer_test.dart: observes a DPR change that arrives during a pending direct frame
+00:02 +18: hybrid_canvas_rasterizer_test.dart: observes document adoption during a pending direct frame
+00:02 +19: hybrid_canvas_rasterizer_test.dart: observes document adoption during a pending direct frame
+00:02 +19: hybrid_canvas_rasterizer_test.dart: a disposed view never publishes a pending bitmap composition
+00:02 +20: hybrid_canvas_rasterizer_test.dart: a disposed view never publishes a pending bitmap composition
+00:02 +20: hybrid_canvas_rasterizer_test.dart: omits a platform view removed while bitmap export is pending
+00:02 +21: hybrid_canvas_rasterizer_test.dart: omits a platform view removed while bitmap export is pending
+00:02 +21: hybrid_canvas_rasterizer_test.dart: keeps bitmap presentation while detached and promotes after attachment
+00:02 +22: hybrid_canvas_rasterizer_test.dart: keeps bitmap presentation while detached and promotes after attachment
+00:02 +22: hybrid_canvas_rasterizer_test.dart: joins pending direct work before preparing an exit
+00:02 +23: hybrid_canvas_rasterizer_test.dart: joins pending direct work before preparing an exit
+00:02 +23: hybrid_canvas_rasterizer_test.dart: unpublished direct pixels keep the completed bitmap visible
+00:02 +24: hybrid_canvas_rasterizer_test.dart: unpublished direct pixels keep the completed bitmap visible
+00:02 +24: hybrid_canvas_rasterizer_test.dart: slow native completion does not consume the placeholder observation budget
+00:02 +25: hybrid_canvas_rasterizer_test.dart: slow native completion does not consume the placeholder observation budget
+00:02 +25: hybrid_canvas_rasterizer_test.dart: slow reference readback does not consume the placeholder observation budget
+00:02 +26: hybrid_canvas_rasterizer_test.dart: slow reference readback does not consume the placeholder observation budget
+00:02 +26: hybrid_canvas_rasterizer_test.dart: translucent and antialiased pixels survive bitmap to direct entry
+00:02 +27: hybrid_canvas_rasterizer_test.dart: translucent and antialiased pixels survive bitmap to direct entry
+00:02 +27: hybrid_canvas_rasterizer_test.dart: accepts verified pixels when a synchronous observation finishes late
+00:02 +28: hybrid_canvas_rasterizer_test.dart: accepts verified pixels when a synchronous observation finishes late
+00:02 +28: hybrid_canvas_rasterizer_test.dart: promotes a full-size DPR 2 canvas within the observation budget
+00:02 +29: hybrid_canvas_rasterizer_test.dart: promotes a full-size DPR 2 canvas within the observation budget
+00:02 +29: hybrid_canvas_rasterizer_test.dart: recreates transferred presentation in the destination document
+00:02 +30: hybrid_canvas_rasterizer_test.dart: recreates transferred presentation in the destination document
+00:02 +30: hybrid_canvas_rasterizer_test.dart: disposal releases native context-loss subscriptions
+00:03 +30: hybrid_canvas_rasterizer_test.dart: disposal releases native context-loss subscriptions
+00:03 +31: hybrid_canvas_rasterizer_test.dart: disposal releases native context-loss subscriptions
+00:03 +31: hybrid_canvas_rasterizer_test.dart: (tearDownAll)
+00:03 +31: loading surface_callback_test.dart
+00:03 +31: surface_callback_test.dart: overlapping surfaces receive their own render and context-loss callbacks
+00:03 +32: surface_callback_test.dart: overlapping surfaces receive their own render and context-loss callbacks
+00:03 +32: surface_callback_test.dart: rendering can complete without exporting an image bitmap
+00:03 +33: surface_callback_test.dart: rendering can complete without exporting an image bitmap
+00:03 +33: loading surface_test.dart
+00:03 +33: surface_test.dart: context creation failure completes initialization with an error (false)
+00:03 +34: surface_test.dart: context creation failure completes initialization with an error (false)
+00:03 +34: surface_test.dart: context creation failure completes initialization with an error (true)
+00:03 +35: surface_test.dart: context creation failure completes initialization with an error (true)
+00:03 +35: surface_test.dart: context recovery failure completes rendering with an error (true)
+00:03 +36: surface_test.dart: context recovery failure completes rendering with an error (true)
+00:03 +36: surface_test.dart: context recovery failure completes rendering with an error (false)
+00:03 +37: surface_test.dart: context recovery failure completes rendering with an error (false)
+00:03 +37: surface_test.dart: reuses a picture-to-image result across two onscreen contexts and resize
+00:03 +38: surface_test.dart: reuses a picture-to-image result across two onscreen contexts and resize
+00:03 +38: surface_test.dart: multiple surfaces can complete overlapping callbacks
+00:03 +39: surface_test.dart: multiple surfaces can complete overlapping callbacks
+00:03 +39: surface_test.dart: onscreen surface positions overlays without moving the base canvas
+00:03 +40: surface_test.dart: onscreen surface positions overlays without moving the base canvas
+00:03 +40: surface_test.dart: onscreen surface recreates context and keeps pixels after loss
+00:03 +41: surface_test.dart: onscreen surface recreates context and keeps pixels after loss
+00:03 +41: All tests passed!
+[Firefox:stderr] Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[Firefox:stderr] Exiting due to channel error.
+[Firefox:stderr] Exiting due to channel error.
+Exiting due to channel error.
+[firefox-dart2wasm-skwasm-skwasm] All tests passed!

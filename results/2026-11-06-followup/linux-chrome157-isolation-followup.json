@@ -1,0 +1,1255 @@
+{
+  "browser": "linux-chrome157",
+  "version": "157.0.8103.38",
+  "headless": true,
+  "records": [
+    {
+      "policy": {
+        "name": "none",
+        "coop": "none",
+        "coep": "none"
+      },
+      "rep": 0,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=none&coep=none",
+        "secure": true,
+        "isolated": false,
+        "sharedArrayBufferGlobal": false,
+        "documentHeaders": {
+          "cross-origin-opener-policy": null,
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": null,
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "none",
+        "coop": "none",
+        "coep": "none"
+      },
+      "rep": 1,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=none&coep=none",
+        "secure": true,
+        "isolated": false,
+        "sharedArrayBufferGlobal": false,
+        "documentHeaders": {
+          "cross-origin-opener-policy": null,
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": null,
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "none",
+        "coop": "none",
+        "coep": "none"
+      },
+      "rep": 2,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=none&coep=none",
+        "secure": true,
+        "isolated": false,
+        "sharedArrayBufferGlobal": false,
+        "documentHeaders": {
+          "cross-origin-opener-policy": null,
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": null,
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "coop-only",
+        "coop": "same-origin",
+        "coep": "none"
+      },
+      "rep": 0,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=same-origin&coep=none",
+        "secure": true,
+        "isolated": false,
+        "sharedArrayBufferGlobal": false,
+        "documentHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "coop-only",
+        "coop": "same-origin",
+        "coep": "none"
+      },
+      "rep": 1,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=same-origin&coep=none",
+        "secure": true,
+        "isolated": false,
+        "sharedArrayBufferGlobal": false,
+        "documentHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "coop-only",
+        "coop": "same-origin",
+        "coep": "none"
+      },
+      "rep": 2,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=same-origin&coep=none",
+        "secure": true,
+        "isolated": false,
+        "sharedArrayBufferGlobal": false,
+        "documentHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": null,
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": false,
+            "environment": {
+              "kind": "ready",
+              "isolated": false,
+              "secure": true,
+              "sharedArrayBufferGlobal": false
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "error": "DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated."
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "require-corp",
+        "coop": "same-origin",
+        "coep": "require-corp"
+      },
+      "rep": 0,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=same-origin&coep=require-corp",
+        "secure": true,
+        "isolated": true,
+        "sharedArrayBufferGlobal": true,
+        "documentHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "require-corp",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "require-corp",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "require-corp",
+        "coop": "same-origin",
+        "coep": "require-corp"
+      },
+      "rep": 1,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=same-origin&coep=require-corp",
+        "secure": true,
+        "isolated": true,
+        "sharedArrayBufferGlobal": true,
+        "documentHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "require-corp",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "require-corp",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "require-corp",
+        "coop": "same-origin",
+        "coep": "require-corp"
+      },
+      "rep": 2,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=same-origin&coep=require-corp",
+        "secure": true,
+        "isolated": true,
+        "sharedArrayBufferGlobal": true,
+        "documentHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "require-corp",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "require-corp",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "credentialless",
+        "coop": "same-origin",
+        "coep": "credentialless"
+      },
+      "rep": 0,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=same-origin&coep=credentialless",
+        "secure": true,
+        "isolated": true,
+        "sharedArrayBufferGlobal": true,
+        "documentHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "credentialless",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "credentialless",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "credentialless",
+        "coop": "same-origin",
+        "coep": "credentialless"
+      },
+      "rep": 1,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=same-origin&coep=credentialless",
+        "secure": true,
+        "isolated": true,
+        "sharedArrayBufferGlobal": true,
+        "documentHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "credentialless",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "credentialless",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "policy": {
+        "name": "credentialless",
+        "coop": "same-origin",
+        "coep": "credentialless"
+      },
+      "rep": 2,
+      "passed": true,
+      "result": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+        "location": "http://localhost:8791/web/isolation-probe.html?coop=same-origin&coep=credentialless",
+        "secure": true,
+        "isolated": true,
+        "sharedArrayBufferGlobal": true,
+        "documentHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "credentialless",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workerHeaders": {
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-embedder-policy": "credentialless",
+          "cross-origin-resource-policy": "same-origin"
+        },
+        "workers": [
+          {
+            "kind": "file-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          },
+          {
+            "kind": "blob-module",
+            "executed": true,
+            "sharedRoundTrip": true,
+            "environment": {
+              "kind": "ready",
+              "isolated": true,
+              "secure": true,
+              "sharedArrayBufferGlobal": true
+            },
+            "memoryBufferTag": "[object SharedArrayBuffer]",
+            "reply": {
+              "kind": "shared",
+              "previous": 41,
+              "current": 42,
+              "bufferTag": "[object SharedArrayBuffer]"
+            },
+            "mainValueAfterReply": 42
+          }
+        ],
+        "resources": [
+          {
+            "name": "Same-origin control",
+            "origin": "http://localhost:8791",
+            "corp": "none",
+            "url": "http://localhost:8791/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, no CORP",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "url": "http://localhost:8792/probe-resource.svg?corp=none",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP cross-origin",
+            "origin": "http://localhost:8792",
+            "corp": "cross-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=cross-origin",
+            "loaded": true,
+            "error": null
+          },
+          {
+            "name": "Cross-origin, CORP same-origin",
+            "origin": "http://localhost:8792",
+            "corp": "same-origin",
+            "url": "http://localhost:8792/probe-resource.svg?corp=same-origin",
+            "loaded": false,
+            "error": "load error"
+          },
+          {
+            "name": "Cross-origin with CORS",
+            "origin": "http://localhost:8792",
+            "corp": "none",
+            "cors": true,
+            "url": "http://localhost:8792/probe-resource.svg?corp=none&cors=1",
+            "loaded": true,
+            "error": null
+          }
+        ]
+      },
+      "errors": []
+    }
+  ]
+}

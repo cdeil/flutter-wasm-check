@@ -1,0 +1,38 @@
+{
+  "webkitSource": {
+    "revision": "0f9d0ff49253789ccf10daade36e69b2724541ff",
+    "url": "https://raw.githubusercontent.com/WebKit/WebKit/0f9d0ff49253789ccf10daade36e69b2724541ff/Source/WebCore/loader/CrossOriginEmbedderPolicy.cpp",
+    "inspection": "The parser accepts require-corp; credentialless is explicitly classified as unsupported in the inspected source."
+  },
+  "webkitIssue": {
+    "id": 230550,
+    "summary": "Implement COEP:credentialless",
+    "status": "NEW",
+    "resolution": "",
+    "last_change_time": "2026-09-07T16:35:01Z",
+    "unassigned": true
+  },
+  "flutterPRs": [
+    {
+      "headRefOid": "fc69b195e6b316dadb423b197830d1d015eb9ec1",
+      "isDraft": false,
+      "number": 195104,
+      "state": "OPEN",
+      "updatedAt": "2026-11-05T18:21:47Z"
+    },
+    {
+      "headRefOid": "b09e6cabd227035bc209757ae9586b7454049797",
+      "isDraft": true,
+      "number": 195105,
+      "state": "OPEN",
+      "updatedAt": "2026-11-01T13:24:12Z"
+    },
+    {
+      "headRefOid": "6545049ce4177d712e5541ad0b7658a84053d247",
+      "isDraft": true,
+      "number": 195106,
+      "state": "OPEN",
+      "updatedAt": "2026-11-01T13:24:12Z"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-06",
+  "scope": "Standalone headers, module-worker execution, shared WebAssembly.Memory round trip, image policy controls; no Flutter performance measurements in this follow-up",
+  "documentCases": 64,
+  "executedWorkers": 128,
+  "successfulSharedMemoryRoundTrips": 62,
+  "expectedUnavailableSharedMemoryChecks": 66,
+  "imageResourceControls": 320,
+  "automatedContextsPerPolicy": 3,
+  "nativeFirefoxProcessesPerPolicy": 3,
+  "safariObservedNavigationsPerPolicy": 1,
+  "environmentReference": "../2026-11-06/environment.json",
+  "engine": {
+    "candidate": "b09e6cabd227035bc209757ae9586b7454049797",
+    "bundleFiles": 8,
+    "runtime": "skwasm_st",
+    "results": [
+      {
+        "vendorBrowser": "Firefox 148.0",
+        "passed": 54,
+        "skipped": 0,
+        "exit": 0
+      },
+      {
+        "vendorBrowser": "Firefox 159.0.1",
+        "passed": 54,
+        "skipped": 0,
+        "exit": 0
+      }
+    ],
+    "ciBaselineArchive": {
+      "url": "https://archive.mozilla.org/pub/firefox/releases/148.0/linux-x86_64/en-US/firefox-148.0.tar.xz",
+      "sha256": "a3ea5907006baa19183d5f582f7781c1d0e22fd1605603c4a76fc14b7f55be23",
+      "buildID": "20260216153405",
+      "sourceStamp": "eff69d257e44ce2a29f947baf876e992af8bb9b0"
+    },
+    "patchAppliesCleanly": true,
+    "upstreamCIRun": false,
+    "skiaGoldChecked": false
+  },
+  "rejectedAttempt": "Initial native Firefox CLI screenshots exited without completed records because implicit-body markup defeated load-gate injection. Fixed and rerun; rejected observations excluded."
+}

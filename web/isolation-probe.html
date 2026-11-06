@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Isolation and worker check</title>
+    <style>
+      body {
+        font: 16px system-ui;
+        margin: 24px;
+        background: #f8fafc;
+        color: #0f172a;
+        max-width: 1100px;
+      }
+      h1 {
+        margin-bottom: 6px;
+      }
+      p {
+        line-height: 1.5;
+      }
+      nav {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+      a {
+        color: #1d4ed8;
+      }
+      .cards {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .card {
+        padding: 18px;
+        border: 1px solid #cbd5e1;
+        border-radius: 12px;
+        background: white;
+        min-width: 240px;
+        flex: 1;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      .yes {
+        color: #15803d;
+      }
+      .no {
+        color: #b91c1c;
+      }
+      pre {
+        white-space: pre-wrap;
+        font-size: 12px;
+      }
+      #status {
+        font-weight: bold;
+      }
+      img {
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+      }
+      small {
+        color: #475569;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Isolation and worker check</h1>
+    <p>
+      Standalone browser capabilities. A running Worker is not proof that
+      shared-memory rendering is available.
+    </p>
+    <nav id="policies"></nav>
+    <p id="status">Checking…</p>
+    <div class="cards" id="cards"></div>
+    <h2>Second-origin image controls</h2>
+    <div id="resources"></div>
+    <p>
+      <small
+        >The shared-memory check passes an actual shared WebAssembly.Memory to a
+        worker and verifies its atomic write on the main thread. It does not
+        benchmark Flutter rendering.</small
+      >
+    </p>
+    <details>
+      <summary>Raw observations</summary>
+      <pre id="raw"></pre>
+    </details>
+    <script type="module">
+      const q = new URLSearchParams(location.search);
+      const policies = [
+        { name: "No headers", coop: "none", coep: "none" },
+        { name: "COOP only", coop: "same-origin", coep: "none" },
+        { name: "require-corp", coop: "same-origin", coep: "require-corp" },
+        { name: "credentialless", coop: "same-origin", coep: "credentialless" },
+      ];
+      for (const p of policies) {
+        const a = document.createElement("a");
+        const u = new URL(location.href);
+        u.searchParams.set("coop", p.coop);
+        u.searchParams.set("coep", p.coep);
+        u.searchParams.delete("label");
+        u.searchParams.delete("gate");
+        a.href = u;
+        a.textContent = p.name;
+        document.querySelector("#policies").append(a);
+      }
+      const headerNames = [
+        "cross-origin-opener-policy",
+        "cross-origin-embedder-policy",
+        "cross-origin-resource-policy",
+      ];
+      const headers = (response) =>
+        Object.fromEntries(
+          headerNames.map((k) => [k, response.headers.get(k)]),
+        );
+      const response = await fetch(location.href);
+      const workerUrl = new URL("isolation-worker.js", location.href);
+      workerUrl.searchParams.set("coop", q.get("coop") || "same-origin");
+      workerUrl.searchParams.set("coep", q.get("coep") || "require-corp");
+      const workerResponse = await fetch(workerUrl);
+      const workerCode = await workerResponse.text();
+
+      async function checkWorker(kind) {
+        const blobUrl =
+          kind === "blob-module"
+            ? URL.createObjectURL(
+                new Blob([workerCode], { type: "application/javascript" }),
+              )
+            : null;
+        let worker, timer;
+        const result = { kind, executed: false, sharedRoundTrip: false };
+        try {
+          worker = new Worker(blobUrl || workerUrl, {
+            type: "module",
+            name: "isolation-probe",
+          });
+          const ready = await new Promise((resolve, reject) => {
+            timer = setTimeout(
+              () => reject(Error("Worker ready timeout")),
+              5000,
+            );
+            worker.onerror = (e) => {
+              e.preventDefault();
+              reject(Error(e.message));
+            };
+            worker.onmessage = (e) => {
+              clearTimeout(timer);
+              resolve(e.data);
+            };
+          });
+          result.executed = ready.kind === "ready";
+          result.environment = ready;
+          const memory = new WebAssembly.Memory({
+            initial: 1,
+            maximum: 1,
+            shared: true,
+          });
+          result.memoryBufferTag = Object.prototype.toString.call(
+            memory.buffer,
+          );
+          const view = new Int32Array(memory.buffer);
+          Atomics.store(view, 0, 41);
+          const answer = await new Promise((resolve, reject) => {
+            timer = setTimeout(
+              () => reject(Error("Shared memory reply timeout")),
+              5000,
+            );
+            worker.onerror = (e) => {
+              e.preventDefault();
+              reject(Error(e.message));
+            };
+            worker.onmessage = (e) => {
+              clearTimeout(timer);
+              resolve(e.data);
+            };
+            try {
+              worker.postMessage({ memory });
+            } catch (error) {
+              reject(error);
+            }
+          });
+          result.reply = answer;
+          result.mainValueAfterReply = Atomics.load(view, 0);
+          result.sharedRoundTrip =
+            answer.kind === "shared" &&
+            answer.previous === 41 &&
+            answer.current === 42 &&
+            result.mainValueAfterReply === 42 &&
+            answer.bufferTag === "[object SharedArrayBuffer]";
+        } catch (error) {
+          result.error = String(error);
+        } finally {
+          clearTimeout(timer);
+          worker?.terminate();
+          if (blobUrl) URL.revokeObjectURL(blobUrl);
+        }
+        return result;
+      }
+      const other = new URL(location.origin);
+      other.port = q.get("resourcePort") || String(Number(location.port) + 1);
+      const resources = await Promise.all(
+        [
+          {
+            name: "Same-origin control",
+            origin: location.origin,
+            corp: "none",
+          },
+          { name: "Cross-origin, no CORP", origin: other.origin, corp: "none" },
+          {
+            name: "Cross-origin, CORP cross-origin",
+            origin: other.origin,
+            corp: "cross-origin",
+          },
+          {
+            name: "Cross-origin, CORP same-origin",
+            origin: other.origin,
+            corp: "same-origin",
+          },
+          {
+            name: "Cross-origin with CORS",
+            origin: other.origin,
+            corp: "none",
+            cors: true,
+          },
+        ].map(
+          (test) =>
+            new Promise((resolve) => {
+              const image = new Image();
+              const url = new URL("/probe-resource.svg", test.origin);
+              url.searchParams.set("corp", test.corp);
+              if (test.cors) {
+                url.searchParams.set("cors", "1");
+                image.crossOrigin = "anonymous";
+              }
+              const row = document.createElement("p");
+              row.append(image, document.createTextNode(test.name));
+              document.querySelector("#resources").append(row);
+              const timer = setTimeout(() => finish(false, "timeout"), 5000);
+              function finish(loaded, error = null) {
+                clearTimeout(timer);
+                row.append(
+                  document.createTextNode(
+                    loaded ? " — loaded" : " — blocked/failed",
+                  ),
+                );
+                resolve({ ...test, url: url.href, loaded, error });
+              }
+              image.onload = () => finish(image.naturalWidth === 32);
+              image.onerror = () => finish(false, "load error");
+              image.src = url;
+            }),
+        ),
+      );
+      const workers = await Promise.all(
+        ["file-module", "blob-module"].map(checkWorker),
+      );
+      window.isolationResult = {
+        userAgent: navigator.userAgent,
+        location: location.href,
+        secure: isSecureContext,
+        isolated: crossOriginIsolated,
+        sharedArrayBufferGlobal: typeof SharedArrayBuffer === "function",
+        documentHeaders: headers(response),
+        workerHeaders: headers(workerResponse),
+        workers,
+        resources,
+      };
+      document.querySelector("#status").textContent =
+        `COEP=${isolationResult.documentHeaders["cross-origin-embedder-policy"] || "absent"} · COOP=${isolationResult.documentHeaders["cross-origin-opener-policy"] || "absent"} · crossOriginIsolated=${crossOriginIsolated}`;
+      for (const w of workers) {
+        const card = document.createElement("section");
+        card.className = "card";
+        const title = document.createElement("h2");
+        title.textContent = w.kind;
+        card.append(title);
+        for (const [name, ok] of [
+          ["Worker executed", w.executed],
+          ["Shared Wasm memory round trip", w.sharedRoundTrip],
+        ]) {
+          const p = document.createElement("p");
+          p.className = ok ? "yes" : "no";
+          p.textContent = `${ok ? "YES" : "NO"} — ${name}`;
+          card.append(p);
+        }
+        document.querySelector("#cards").append(card);
+      }
+      document.querySelector("#raw").textContent = JSON.stringify(
+        isolationResult,
+        null,
+        2,
+      );
+      if (q.get("save") === "1")
+        await fetch("/result", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            label: q.get("label") || "isolation-native",
+            isolation: isolationResult,
+          }),
+        });
+    </script>
+  </body>
+</html>
