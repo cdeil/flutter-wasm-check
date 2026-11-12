@@ -76,6 +76,8 @@ chart libraries or a recommendation to replace a grid.
   existing issues/PRs, what is worth contributing, and what is not a confirmed bug.
 - [Follow-up validation](docs/followup-validation-2026-11-06.md): standalone
   isolation/shared-memory controls and a tested Firefox single-thread engine-lane patch.
+- [Re-evaluation after Flutter 3.50](docs/reevaluation-flutter-3.50-2026-11-12.md):
+  what 3.50 / Dart 3.14 changed, item-by-item status and revised contribution order.
 - [Unposted drafts](drafts/): concise starting points for human review.
 - [Sources and licenses](docs/sources.md): pinned Git submodules and package releases.
 
